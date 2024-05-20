@@ -60,7 +60,7 @@ app.use(function (err, req, res, next) {
 	res.status(err.statusCode).json({ message: err.message, statusCode: err.statusCode });
 });	
 
-
+app.get("/", (req, res) => res.send("Express on Vercel"));
 // console.log("db",process.env.DATA_BASE)
 mongoose
 	.connect(process.env.DATA_BASE)
